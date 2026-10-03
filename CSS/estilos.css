@@ -1,0 +1,39 @@
+/*variable*/
+:root{
+  --color-principal: ....;
+  --color-secundario:...;
+  --color-texto:...;
+  --color-acento:...;
+  --color-fondo:...;
+  --fuente: sans-serif;/*el trebajo nos pide almenos una fuente ahora que lo leo*/
+}
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*body*/
+body{
+  background-color: var(--color-fondo);/*o podemos usar una imagen*/
+  color: var(--color-texto);
+  font-family: var(--fuente);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+/*header*/
+
+/*nav*/
+
+/*section*/
+
+/*tabla*/
+
+/*formulario*/
+
+/*imagenes*/
+
+/*esto masomenos lo añado para tenerlo ya a la mano y por requisitos que pide el trabajo, editenlo como gusten*/
