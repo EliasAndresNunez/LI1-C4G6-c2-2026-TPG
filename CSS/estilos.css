@@ -1,21 +1,25 @@
 /*variable*/
-:root{
+:root {
   --color-principal: ....;
-  --color-secundario:...;
-  --color-texto:...;
-  --color-acento:...;
-  --color-fondo:...;
-  --fuente: sans-serif;/*el trebajo nos pide almenos una fuente ahora que lo leo*/
+  --color-secundario: ...;
+  --color-texto: ...;
+  --color-acento: ...;
+  --color-fondo: ...;
+  --fuente: sans-serif;
+  /*el trebajo nos pide almenos una fuente ahora que lo leo*/
 }
+
 /*reset*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 /*body*/
-body{
-  background-color: var(--color-fondo);/*o podemos usar una imagen*/
+body {
+  background-color: var(--color-fondo);
+  /*o podemos usar una imagen*/
   color: var(--color-texto);
   font-family: var(--fuente);
   font-size: 16px;
@@ -24,9 +28,76 @@ body{
   margin: 0 auto;
   padding: 0 1rem;
 }
+
 /*header*/
+header {
+  background-color: var(--color-principal);
+  color: var(--color-texto);
+  padding: 20px;
+  text-align: center;
+  font-family: var(--fuente), sans-serif;
+}
 
 /*nav*/
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  flex: 1;
+  color: var(--color-texto);
+  background-color: var(--color-secundario);
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--color-secundario);
+  background-color: var(--color-texto);
+}
+
+/* Tipografía */
+h1 {
+  color: var(--color-acento);
+  font-family: var(--fuente), serif;
+  font-size: 32px;
+}
+
+h2 {
+  color: var(--color-principal);
+  font-family: var(--fuente), serif;
+  font-size: 24px;
+  display: inline-block;
+  background-color: var(--color-acento);
+  padding: 0px 10px;
+}
+
+h3 {
+  color: var(--color-secundario);
+  font-family: var(--fuente), serif;
+  font-size: 20px;
+  background-color: var(--color-acento);
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+h4 {
+  color: var(--color-acento);
+  font-family: var(--fuente), serif;
+  font-size: 20px;
+  background-color: var(--color-secundario);
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+
+p {
+  font-size: 16px;
+  margin: 1em;
+  color: var(--color-texto);
+}
 
 /*section*/
 
