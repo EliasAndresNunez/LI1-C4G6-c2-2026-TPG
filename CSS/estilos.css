@@ -1,12 +1,11 @@
 /*variable*/
 :root {
-  --color-principal: ....;
-  --color-secundario: ...;
-  --color-texto: ...;
-  --color-acento: ...;
-  --color-fondo: ...;
+  --color-principal: #6f65a0;
+  --color-secundario: #f0ffff;
+  --color-texto: #000000;
+  --color-acento: #73f3bd;
+  --color-fondo:  #656a62;
   --fuente: sans-serif;
-  /*el trebajo nos pide almenos una fuente ahora que lo leo*/
 }
 
 /*reset*/
@@ -19,7 +18,6 @@
 /*body*/
 body {
   background-color: var(--color-fondo);
-  /*o podemos usar una imagen*/
   color: var(--color-texto);
   font-family: var(--fuente);
   font-size: 16px;
