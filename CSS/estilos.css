@@ -5,7 +5,7 @@
   --color-texto: #000000;
   --color-acento: #73f3bd;
   --color-fondo:  #656a62;
-  --fuente: sans-serif;
+  --fuente: "IBM+Plex+Mono:ital",sans-serif;
 }
 
 /*reset*/
@@ -52,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--color-secundario);
+  color: var(--color-acento);
   background-color: var(--color-texto);
 }
 
@@ -104,5 +104,15 @@ p {
 /*formulario*/
 
 /*imagenes*/
-
-/*esto masomenos lo añado para tenerlo ya a la mano y por requisitos que pide el trabajo, editenlo como gusten*/
+img{
+    margin: 20px;
+    border: 0.5rem outset var(--color-principal);
+}
+/*footer*/
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
