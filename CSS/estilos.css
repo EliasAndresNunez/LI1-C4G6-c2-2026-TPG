@@ -137,7 +137,7 @@ img{
 }
 /*footer*/
 footer {
-    background-color: var(--color-primario);
+    background-color: var(--color-principal);
     color: var(--color-texto);
     text-align: center;
     padding: 10px;
