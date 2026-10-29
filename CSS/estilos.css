@@ -67,7 +67,7 @@ main {
 }
 /* Tipografía */
 h1 {
-  color: var(--color-acento);
+  color: var(--color-principal);
   font-family: var(--fuente), serif;
   font-size: 32px;
 }
@@ -132,7 +132,11 @@ section {
 .card p {
     margin: 1rem 0;
 }
-
+.link{
+    display: inline-block;
+   border: var(--color-principal);
+   background-color: var(--color-acento);
+}
 /*tabla*/
 
 /*formulario*/
