@@ -114,7 +114,7 @@ p {
 .card {
     flex: 1 1 280px;
     padding: 1.5rem;
-    background-color: var(--color-primario);
+    background-color: var(--color-principal);
     border: 6px solid var(--color-secundario);
     border-radius: 8px;
 }
