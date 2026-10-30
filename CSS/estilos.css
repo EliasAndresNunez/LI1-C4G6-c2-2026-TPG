@@ -53,7 +53,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--color-acento);
+  color: var(--color-principal);
   text-decoration: underline;
 }
 /*main*/
