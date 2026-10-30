@@ -7,6 +7,18 @@
        <link rel="preconnect" href="https://fonts.googleapis.com" >
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" >
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Estilo propio para que las letras del menú de Bootstrap se vean bien blancas y sin transparencia -->
+    <style>
+        .navbar-dark .navbar-nav .nav-link,
+        .navbar-dark .navbar-brand {
+            color: #ffffff !important;
+        }
+    </style>
+
 <link rel="stylesheet" href="CSS/estilos.css">
 </head>
 <body>
@@ -25,12 +37,36 @@
       </div>
        <h1>Lo mejor de Doofania</h1>   
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">inicio</a></li>
-            <li><a href="ciudad.html">ciudad</a></li>
-            <li><a href="contacto.html">contactos</a></li>
-        </ul>
+     <!-- Contenedor principal de la barra de navegación responsiva con color violeta -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6f65a0 !important;">
+        <div class="container-fluid">
+            <!-- Marca o logo principal que redirige al inicio, con un badge decorativo -->
+            <a class="navbar-brand" href="index.html">Doofania <span class="badge bg-secondary">Turismo</span></a>
+            
+            <!-- Botón del menú hamburguesa que aparece automáticamente en pantallas chicas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Contenedor colapsable que agrupa y oculta/muestra los enlaces de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Lista de navegación alineada a la derecha con ms-auto -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ciudad.html">ciudad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lugares.html">lugares</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <!--informacion de los lugares de doofania-->
     <main>
