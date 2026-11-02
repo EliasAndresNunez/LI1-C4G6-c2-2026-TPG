@@ -141,13 +141,6 @@ section {
 
 /*formulario*/
 
-/*imagenes*/
-img{
-    max-width: 100%;
-    height: auto;
-    margin: 1rem;
-    border: 0.5rem outset var(--color-principal);
-}
 /*footer*/
 footer {
     background-color: var(--color-principal);
