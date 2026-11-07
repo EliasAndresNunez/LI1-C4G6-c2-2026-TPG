@@ -17,7 +17,7 @@
 
 /*body*/
 body {
-  background-color: url(multimedia/imagenes/imagen_ciudad_doofania.jpg);
+  background-image: url(multimedia/imagenes/imagen_ciudad_doofania.jpg);
   color: var(--color-texto);
   font-family: var(--fuente);
   font-size: 16px;
