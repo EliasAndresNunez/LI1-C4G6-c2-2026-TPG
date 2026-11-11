@@ -17,7 +17,7 @@
 
 /*body*/
 body {
-  background-image: url(multimedia/imagenes/imagen_ciudad_doofania.jpg);
+  background-image: url(../multimedia/imagenes/imagen_ciudad_doofania.jpg);
   color: var(--color-texto);
   font-family: var(--fuente);
   font-size: 16px;
@@ -26,7 +26,10 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
+/*main*/
+main{
+  background-color: var(--color-secundario);
+}
 /*header*/
 header {
   background-color: var(--color-principal);
@@ -34,6 +37,18 @@ header {
   padding: 1.25rem;
   text-align: center;
   font-family: var(--fuente), sans-serif;
+}
+/*header content*/
+div.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+/*header logo*/
+img.header-logo {
+  height: 150px;
+  margin-left: 10rem;
 }
 
 /*nav*/
@@ -67,9 +82,11 @@ main {
 }
 /* Tipografía */
 h1 {
-  color: var(--color-principal);
+  color: var(--color-acento);
   font-family: var(--fuente), serif;
   font-size: 32px;
+  text-align: center;
+  text-decoration: underline 1px;
 }
 
 h2 {
@@ -77,13 +94,13 @@ h2 {
   font-size: 1.5rem;
   display: inline-block;
   background-color: var(--color-acento);
-  padding: 0 0.625rem;
+  /*padding: 0 0.625rem;*/
 }
 
 h3 , h4 {
   color: var(--color-principal);
   font-family: var(--fuente), serif;
-  font-size: 1.25px;
+  font-size: 1.25rem;
   background-color: var(--color-secundario);
   display: inline-block;
   padding: 0 0.625rem;
@@ -91,9 +108,9 @@ h3 , h4 {
 
 
 p {
+  text-align: left;
   font-size: 1rem;
-  padding: 0.5rem;
-  margin:  0.5rem 0;
+  margin:  0.5rem 1rem;
   color: var(--color-texto);
   background-color: var(--color-secundario);
 }
@@ -102,7 +119,7 @@ p {
 section {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -114,7 +131,7 @@ section {
 }
 
 .servicios {
-    flex-direction: row;
+    /*flex-direction: row;*/
     flex-wrap: wrap;
     align-items: stretch;
     gap: 1.5rem;
@@ -122,17 +139,25 @@ section {
 
 /* Cards */
 .card {
-    flex: 1 1 280px;
-    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: var(--color-principal);
-    border: 6px solid var(--color-secundario);
+    border: 6px solid var(--color-acento);
     border-radius: 8px;
+    width: auto;
 }
-
 .card p {
     margin: 1rem 0;
 }
-.link{
+.card img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+/*botton*/
+.botton{
     display: inline-block;
    border: var(--color-principal);
    background-color: var(--color-acento);
