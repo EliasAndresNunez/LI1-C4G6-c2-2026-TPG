@@ -9,18 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <!-- Carga los estilos base de Bootstrap desde el CDN oficial -->
+    <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- estilos propios -->
     <link rel="stylesheet" href="css/estilos.css">
-
-    <!-- Estilo propio para que las letras del menú de Bootstrap se vean bien blancas y sin transparencia -->
-    <style>
-        .navbar-dark .navbar-nav .nav-link,
-        .navbar-dark .navbar-brand {
-            color: #ffffff !important;
-        }
-    </style>
 </head>
 
 <body>
@@ -29,20 +22,16 @@
         <h1>Contacto</h1>
     </header>
 
-    <!-- Barra de navegación responsiva, con color violeta y pegada arriba al hacer scroll (sticky-top) -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #6f65a0 !important;">
+    <!-- navbar responsiva -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-violeta">
         <div class="container-fluid">
-            <!-- Marca o logo principal que redirige al inicio, con un badge decorativo -->
             <a class="navbar-brand" href="index.html">Doofania <span class="badge bg-secondary">Turismo</span></a>
             
-            <!-- Botón del menú hamburguesa que aparece automáticamente en pantallas chicas -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <!-- Contenedor colapsable que agrupa y oculta/muestra los enlaces de navegación -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Lista de navegación alineada a la derecha con ms-auto -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">inicio</a>
@@ -61,7 +50,8 @@
         </div>
     </nav>
 
-    <main>
+    <!-- contenedor principal con grilla de bootstrap -->
+    <main class="container my-4">
         <section id="contacto">
             <h2>Oficina de Turismo de Doofania</h2>
 
@@ -70,58 +60,74 @@
                 podés comunicarte con nuestra oficina de turismo.
             </p>
 
-            <h3>Dirección de oficina de turismo</h3>
-
+            <!-- enlace interno con clase de boton bootstrap -->
             <p>
-                Avenida central 186<br>
-                Centro de Doofania
+                <a href="#horarios" class="btn btn-secondary btn-sm">Ver horarios de atención</a>
             </p>
 
-            <h3>📞 Teléfono</h3>
+            <!-- fila y columnas responsivas con espaciado -->
+            <div class="row g-4 mt-2">
+                <div class="col-12 col-md-6">
+                    <h3>Dirección de oficina de turismo</h3>
+                    <p>
+                        Avenida central 186<br>
+                        Centro de Doofania
+                    </p>
 
-            <p>
-                <a href="tel:+541129028542">+54 11 2902-8542</a>
-            </p>
+                    <h3>📞 Teléfono</h3>
+                    <p>
+                        <a href="tel:+541129028542">+54 11 2902-8542</a>
+                    </p>
 
-            <h3>✉️ Correo electrónico</h3>
+                    <h3>✉️ Correo electrónico</h3>
+                    <p>
+                        <a href="mailto:turismo@doofania.com">
+                            turismo@doofania.com
+                        </a>
+                    </p>
+                </div>
 
-            <p>
-                <a href="mailto:turismo@doofania.com">
-                    turismo@doofania.com
-                </a>
-            </p>
+                <div class="col-12 col-md-6" id="horarios">
+                    <h3>Horarios de atención</h3>
+                    <dl>
+                        <dt>Lunes a viernes</dt>
+                        <dd>09:00 a 18:00</dd>
 
-            <h3>Horarios de atención</h3>
+                        <dt>Sábados</dt>
+                        <dd>10:00 a 16:00</dd>
 
-            <dl>
-                <dt>Lunes a viernes</dt>
-                <dd>09:00 a 18:00</dd>
+                        <dt>Domingos</dt>
+                        <dd>Cerrado</dd>
+                    </dl>
 
-                <dt>Sábados</dt>
-                <dd>10:00 a 16:00</dd>
+                    <h3>Pasos para coordinar una visita guiada</h3>
+                    <!-- lista ordenada -->
+                    <ol>
+                        <li>Revisá nuestros horarios de atención.</li>
+                        <li>Comunicate por teléfono o correo electrónico.</li>
+                        <li>Acercate a nuestra oficina en Avenida central 186.</li>
+                    </ol>
+                </div>
+            </div>
 
-                <dt>Domingos</dt>
-                <dd>Cerrado</dd>
-            </dl>
+            <div class="mt-4">
+                <h3>Redes sociales</h3>
+                <p>
+                    Seguinos en nuestra
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        red social
+                    </a>
+                    para conocer las novedades de Doofania.
+                </p>
 
-            <h3>Redes sociales</h3>
-
-            <p>
-                Seguinos en nuestra
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                    red social
-                </a>
-                para conocer las novedades de Doofania.
-            </p>
-
-            <p>
-                <em>Estamos para ayudarte a descubrir todo lo que Doofania tiene para ofrecer.</em>
-            </p>
-            <p>
-                <strong>¡Te esperamos en Doofania!</strong>
-                Acercate a nuestra oficina para recibir información y recomendaciones
-                para disfrutar de tu visita.
-            </p>
+                <!-- componente alert de bootstrap -->
+                <div class="alert alert-light mt-3" role="alert">
+                    <em>Estamos para ayudarte a descubrir todo lo que Doofania tiene para ofrecer.</em><br>
+                    <strong>¡Te esperamos en Doofania!</strong>
+                    Acercate a nuestra oficina para recibir información y recomendaciones
+                    para disfrutar de tu visita.
+                </div>
+            </div>
         </section>
     </main>
 
@@ -129,7 +135,7 @@
         <small>Doofania - Turismo y cultura &copy; 2026</small>
     </footer>
 
-    <!-- Script de JavaScript de Bootstrap necesario para que funcione el despliegue del menú hamburguesa -->
+    <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
