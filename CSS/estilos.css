@@ -1,21 +1,21 @@
-/*variable*/
+/* variables */
 :root {
   --color-principal: #6f65a0;
   --color-secundario: #f0ffff;
   --color-texto: #000000;
   --color-acento: #73f3bd;
-  --color-fondo:  #656a62;
-  --fuente: "Montserrat",sans-serif;
+  --color-fondo: #656a62;
+  --fuente: "Montserrat", sans-serif;
 }
 
-/*reset*/
+/* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*body*/
+/* body */
 body {
   background-image: url(../multimedia/imagenes/imagen_ciudad_doofania.jpg);
   color: var(--color-texto);
@@ -26,11 +26,8 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
-/*main*/
-main{
-  background-color: var(--color-secundario);
-}
-/*header*/
+
+/* header */
 header {
   background-color: var(--color-principal);
   color: var(--color-texto);
@@ -38,20 +35,22 @@ header {
   text-align: center;
   font-family: var(--fuente), sans-serif;
 }
-/*header content*/
+
+/* header content */
 div.header-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
-/*header logo*/
+
+/* header logo */
 img.header-logo {
   height: 150px;
   margin-left: 10rem;
 }
 
-/*nav*/
+/* nav */
 nav ul {
   display: flex;
   gap: 1.5rem;
@@ -71,8 +70,10 @@ nav a:hover {
   color: var(--color-acento);
   text-decoration: underline;
 }
-/*main*/
+
+/* main */
 main {
+  background-color: var(--color-secundario);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -80,7 +81,8 @@ main {
   margin: 0 auto;
   padding: 1rem 0;
 }
-/* Tipografía */
+
+/* tipografía */
 h1 {
   color: var(--color-acento);
   font-family: var(--fuente), serif;
@@ -94,10 +96,9 @@ h2 {
   font-size: 1.5rem;
   display: inline-block;
   background-color: var(--color-acento);
-  /*padding: 0 0.625rem;*/
 }
 
-h3 , h4 {
+h3, h4 {
   color: var(--color-principal);
   font-family: var(--fuente), serif;
   font-size: 1.25rem;
@@ -106,16 +107,15 @@ h3 , h4 {
   padding: 0 0.625rem;
 }
 
-
 p {
   text-align: left;
   font-size: 1rem;
-  margin:  0.5rem 1rem;
+  margin: 0.5rem 1rem;
   color: var(--color-texto);
   background-color: var(--color-secundario);
 }
 
-/*section*/
+/* section */
 section {
   display: flex;
   flex-direction: column;
@@ -124,53 +124,64 @@ section {
   margin-bottom: 1rem;
   padding: 1rem;
 }
+
 .destacado1 {
-    color: var(--color-secundario);
-    text-decoration: underline;
-    padding: 1.5rem;
+  color: var(--color-secundario);
+  text-decoration: underline;
+  padding: 1.5rem;
 }
 
 .servicios {
-    /*flex-direction: row;*/
-    flex-wrap: wrap;
-    align-items: stretch;
-    gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.5rem;
 }
 
-/* Cards */
+/* cards */
 .card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: var(--color-principal);
-    border: 6px solid var(--color-acento);
-    border-radius: 8px;
-    width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--color-principal);
+  border: 6px solid var(--color-acento);
+  border-radius: 8px;
+  width: auto;
 }
+
 .card p {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
+
 .card img {
-    max-width: 50%;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 1rem;
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 1rem;
 }
-/*botton*/
-.botton{
-    display: inline-block;
-   border: var(--color-principal);
-   background-color: var(--color-acento);
+
+/* botton */
+.botton {
+  display: inline-block;
+  border: 2px solid var(--color-principal);
+  background-color: var(--color-acento);
 }
-/*tabla*/
 
-/*formulario*/
-
-/*footer*/
+/* footer */
 footer {
-    background-color: var(--color-principal);
-    color: var(--color-secundario);
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
+  background-color: var(--color-principal);
+  color: var(--color-secundario);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* personalizaciones de bootstrap */
+.navbar-violeta {
+  background-color: var(--color-principal) !important;
+}
+
+.navbar-violeta .navbar-nav .nav-link,
+.navbar-violeta .navbar-brand {
+  color: #ffffff !important;
 }
