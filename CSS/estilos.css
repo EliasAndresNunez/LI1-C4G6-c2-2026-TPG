@@ -1,21 +1,19 @@
-/* variables */
+/*variable*/
 :root {
   --color-principal: #6f65a0;
   --color-secundario: #f0ffff;
   --color-texto: #000000;
   --color-acento: #73f3bd;
-  --color-fondo: #656a62;
-  --fuente: "Montserrat", sans-serif;
+  --color-fondo:  #656a62;
+  --fuente: "Montserrat",sans-serif;
 }
-
-/* reset */
+/*reset*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* body */
+/*body*/
 body {
   background-image: url(../multimedia/imagenes/imagen_ciudad_doofania.jpg);
   color: var(--color-texto);
@@ -26,8 +24,7 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
-/* header */
+/*header*/
 header {
   background-color: var(--color-principal);
   color: var(--color-texto);
@@ -35,22 +32,36 @@ header {
   text-align: center;
   font-family: var(--fuente), sans-serif;
 }
-
 /* header content */
 div.header-content {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
 }
-
+div.header-content h2 {
+  color: var(--color-principal);
+  background-color: var(--color-acento);
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  overflow-wrap: anywhere;
+  text-align: center;
+  margin-top: 3rem;
+}
 /* header logo */
 img.header-logo {
-  height: 150px;
-  margin-left: 10rem;
+  flex: 0 1 150px;
+  width: min(100%, 150px);
+  height: auto;
+  margin: 0;
 }
-
-/* nav */
+/*nav*/
 nav ul {
   display: flex;
   gap: 1.5rem;
@@ -58,20 +69,17 @@ nav ul {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 nav a {
   color: var(--color-texto);
   display: inline-block;
   padding: 10px;
   text-decoration: none;
 }
-
 nav a:hover {
   color: var(--color-acento);
   text-decoration: underline;
 }
-
-/* main */
+/*main*/
 main {
   background-color: var(--color-secundario);
   display: flex;
@@ -81,8 +89,7 @@ main {
   margin: 0 auto;
   padding: 1rem 0;
 }
-
-/* tipografía */
+/* Tipografía */
 h1 {
   color: var(--color-acento);
   font-family: var(--fuente), serif;
@@ -90,32 +97,33 @@ h1 {
   text-align: center;
   text-decoration: underline 1px;
 }
-
 h2 {
+  display: inline-block;
   color: var(--color-principal);
   font-size: 1.5rem;
-  display: inline-block;
   background-color: var(--color-acento);
+  align-self: flex-start;
 }
-
-h3, h4 {
+h3,
+h4 {
   color: var(--color-principal);
   font-family: var(--fuente), serif;
   font-size: 1.25rem;
   background-color: var(--color-secundario);
+  display: flex;
   display: inline-block;
   padding: 0 0.625rem;
 }
-
+/*parrafos*/
 p {
   text-align: left;
+  display: inline-block;
   font-size: 1rem;
   margin: 0.5rem 1rem;
   color: var(--color-texto);
   background-color: var(--color-secundario);
 }
-
-/* section */
+/*section generalizada*/
 section {
   display: flex;
   flex-direction: column;
@@ -124,50 +132,185 @@ section {
   margin-bottom: 1rem;
   padding: 1rem;
 }
-
+/*section de costumbres y datos*/
+section.costumbres_y_datos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+/*secciones con imagen y texto*/
+.seccion-imagen-texto {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "contenido imagen";
+  align-items: center;
+  gap: 1.5rem;
+}
+.seccion-imagen-texto.imagen-izquierda {
+  grid-template-areas: "imagen contenido";
+}
+.seccion-imagen-texto .contenido {
+  grid-area: contenido;
+  min-width: 0;
+}
+.seccion-imagen-texto > img,
+.seccion-imagen-texto > a {
+  grid-area: imagen;
+}
+.seccion-imagen-texto > img,
+.seccion-imagen-texto > a img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+}
+/*seccion de barrios*/
+.seccion-barrios {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+.barrios-intro {
+  min-width: 0;
+}
+.seccion-barrios .barrios-card {
+  width: 100%;
+  max-width: 100%;
+  align-items: stretch;
+}
+.seccion-barrios .barrios-card ul {
+  width: 100%;
+}
+/*destacado1*/
 .destacado1 {
   color: var(--color-secundario);
   text-decoration: underline;
   padding: 1.5rem;
 }
-
+/*servicios generalizados*/
 .servicios {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
   gap: 1.5rem;
 }
-
-/* cards */
+/*card generalizada*/
+.servicios .card {
+  flex: 1 1 250px;
+  max-width: 320px;
+  align-items: stretch;
+}
+/*seccion y cards del barrio*/
+.card.barrios-card {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: none;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+}
+/*seccion del museo*/
+.museo-inador {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.5rem;
+  width: 100%;
+}
+.museo-inador .card,
+.museo-inador img {
+  flex: 1 1 320px;
+  min-width: 0;
+  max-width: 100%;
+}
+.museo-inador img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+}
+/* Cards */
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   background-color: var(--color-principal);
   border: 6px solid var(--color-acento);
   border-radius: 8px;
-  width: auto;
 }
-
-.card p {
-  margin: 1rem 0;
+/*card de sabias que*/
+.card.card_sabias {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: none;
+  align-items: stretch;
 }
-
+.card.card_sabias img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  align-self: center;
+}
+.card.card-row {
+  flex-direction: row;
+}
 .card img {
   max-width: 50%;
+  min-width: 0;
   height: auto;
   border-radius: 8px;
   margin-right: 1rem;
 }
-
-/* botton */
-.botton {
-  display: inline-block;
-  border: 2px solid var(--color-principal);
-  background-color: var(--color-acento);
+.card.costumbres-card {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: none;
+  align-items: stretch;
 }
-
-/* footer */
+/*div de grilla*/
+.div-grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+.leyes .div-grilla > .list-group-item img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 700px) {
+  .seccion-imagen-texto,
+  .seccion-barrios {
+    grid-template-columns: 1fr;
+  }
+  .seccion-imagen-texto {
+    grid-template-areas:
+      "contenido"
+      "imagen";
+  }
+  .seccion-imagen-texto.imagen-izquierda {
+    grid-template-areas:
+      "contenido"
+      "imagen";
+  }
+  .globito .card.card-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .globito .card.card-row img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+/*footer*/
 footer {
   background-color: var(--color-principal);
   color: var(--color-secundario);
@@ -175,7 +318,40 @@ footer {
   padding: 1rem;
   width: 100%;
 }
+.pie-pagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.pie-pagina p {
+  margin: 0.25rem 0;
+  color: inherit;
+  background-color: transparent;
+}
+.pie-pagina a {
+  color: inherit;
+}
 
+.pie-pagina a:hover {
+  color: var(--color-acento);
+}
+
+.pie-pagina-firma img {
+  display: block;
+  width: min(100%, 335px);
+  height: auto;
+  margin: 0 auto;
+  padding: 0.25rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+@media (max-width: 700px) {
+  .pie-pagina {
+    justify-content: center;
+  }
+}
 /* personalizaciones de bootstrap */
 .navbar-violeta {
   background-color: var(--color-principal) !important;
