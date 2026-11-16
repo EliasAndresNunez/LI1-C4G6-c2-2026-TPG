@@ -242,36 +242,13 @@ section.costumbres_y_datos {
   border: 6px solid var(--color-acento);
   border-radius: 8px;
 }
-/*card de sabias que*/
-.card.card_sabias {
-  flex: 1 1 100%;
-  width: 100%;
-  max-width: none;
-  align-items: stretch;
-}
-.card.card_sabias img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  align-self: center;
-}
-.card.card-row {
-  flex-direction: row;
-}
+
 .card img {
-  max-width: 50%;
+  width: 100%;
   min-width: 0;
   height: auto;
   border-radius: 8px;
-  margin-right: 1rem;
-}
-.card.costumbres-card {
-  flex: 1 1 100%;
-  width: 100%;
-  max-width: none;
-  align-items: stretch;
+  padding: 1rem;
 }
 /*div de grilla*/
 .div-grilla {
