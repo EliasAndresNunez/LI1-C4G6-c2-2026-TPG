@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="CSS/estilos.css">
 </head>
 <body>  
-    <!-- encabezado con logo y título -->
+    <!-- encabezado con botón de modo, logo y título institucional -->
     <header>
+        <button id="btn-modo" type="button" aria-pressed="false" class="btn btn-outline-secondary">🌙</button>
         <div class="header-content">
             <img class="header-logo"
               src="multimedia/imagenes/logo_doofania.png"
@@ -139,13 +140,22 @@
     </main>
 
     <!-- pie de página -->
-    <footer>
-        <a href="https://doofenshmirtzmalvadosyasociados.home.blog/">Doofenshmirtz Malvados y Asociados, mas informacion</a>
-        <img src="multimedia/imagenes/DoofSignature.png" alt="firma de doofenshmirtz" height="80" loading="lazy">
+    <footer class="pie-pagina">
+        <div class="pie-pagina-texto">
+            <p>Doofania</p>
+            <p>Doofenshmirtz Malvados y Asociados</p>
+            <a href="https://doofenshmirtzmalvadosyasociados.home.blog/">Doofenshmirtz Malvados y Asociados: más información</a>
+        </div>
+        <div class="pie-pagina-firma">
+            <p>Con la firma del Dr. Doofenshmirtz</p>
+            <img src="multimedia/imagenes/DoofSignature.png" alt="Firma del Dr. Doofenshmirtz">
+        </div>
+        <small>Doofania - Turismo y cultura &copy; 2026</small>
     </footer>
 
-    <!-- bootstrap js para el funcionamiento del menú hamburguesa -->
+    <!-- scripts de javascript (bootstrap y el script personalizado de la página) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascrip/doofania.js"></script>
 
 </body>
 </html>
