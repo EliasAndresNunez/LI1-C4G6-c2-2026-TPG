@@ -358,3 +358,10 @@ body.oscuro main a {
 .navbar-violeta .navbar-brand {
   color: #ffffff !important;
 }
+
+/* Subrayado básico para el menú y la página activa */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    text-decoration: underline !important;
+    color: #73f3bd !important;
+}
