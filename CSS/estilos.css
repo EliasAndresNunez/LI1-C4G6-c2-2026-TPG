@@ -20,9 +20,9 @@ body {
   font-family: var(--fuente);
   font-size: 16px;
   line-height: 1.6;
-  max-width: 1100px;
+  max-width: auto;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 5rem;
 }
 /*header*/
 header {
