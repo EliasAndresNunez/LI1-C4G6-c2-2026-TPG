@@ -3,40 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Doofania</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
-
-    <!-- bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- estilos propios -->
-    <link rel="stylesheet" href="CSS/estilos.css">
+    <title>Lugares de Doofania</title>
+       <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" >
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="CSS/estilos.css">
 </head>
-<body>  
-    <!-- encabezado con botón de modo, logo y título institucional -->
+<body>
     <header>
         <button id="btn-modo" type="button" aria-pressed="false" class="btn btn-outline-secondary">🌙</button>
         <div class="header-content">
-            <img class="header-logo"
-              src="multimedia/imagenes/logo_doofania.png"
-              alt="logo de doofania"
-              height="200"
-            />
-            <h1>Doofenshmirtz malvados y asociados</h1>
-        </div>   
+        <!-- Logo -->
+        <img class="header-logo"
+          src="multimedia/imagenes/logo_doofania.png"
+          alt="Logo de Doofania"
+          height="200"
+        />
+        <!-- Título e información adicional -->
+        <h1>Doofenshmirtz malvados y asociados</h1>
+      </div>  
     </header>
-
-    <!-- barra de navegación responsiva, violeta y fija arriba (sticky-top) -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-violeta">
+     <!-- Contenedor principal de la barra de navegación responsiva con color violeta -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-violeta sticky-top">
         <div class="container-fluid">
+            <!-- Marca o logo principal que redirige al inicio, con un badge decorativo -->
+            <a class="navbar-brand" href="index.html">Doofania <span class="badge bg-secondary">Turismo</span></a>
+            
+            <!-- Botón del menú hamburguesa que aparece automáticamente en pantallas chicas -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
+            <!-- Contenedor colapsable que agrupa y oculta/muestra los enlaces de navegación -->
             <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Lista de navegación alineada a la derecha con ms-auto -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">inicio</a>
@@ -48,111 +49,87 @@
                         <a class="nav-link" href="lugares.html">lugares</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="contacto.html">contacto</a>
+                        <a class="nav-link" href="contacto.html">contacto</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!-- contenido principal estructurado con grilla de bootstrap -->
-    <main class="container my-4">
-        <section id="contacto">
-            <h2>Oficina de Turismo de Doofania</h2>
-
-            <p>
-                Si querés conocer más sobre <strong>Doofania</strong>,
-                podés comunicarte con nuestra oficina de turismo.
-            </p>
-
-            <!-- enlace interno con diseño de botón bootstrap -->
-            <p>
-                <a href="#horarios" class="btn btn-secondary btn-sm">Ver horarios de atención</a>
-            </p>
-
-            <!-- grilla con filas y columnas responsivas con espaciado -->
-            <div class="row g-4 mt-2">
-                <div class="col-12 col-md-6">
-                    <h3>Dirección de oficina de turismo</h3>
-                    <p>
-                        Avenida central 186<br>
-                        Centro de Doofania
-                    </p>
-
-                    <h3>📞 Teléfono</h3>
-                    <p>
-                        <a href="tel:+541129028542">+54 11 2902-8542</a>
-                    </p>
-
-                    <h3>✉️ Correo electrónico</h3>
-                    <p>
-                        <a href="mailto:turismo@doofania.com">
-                            turismo@doofania.com
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-12 col-md-6" id="horarios">
-                    <h3>Horarios de atención</h3>
-                    <dl>
-                        <dt>Lunes a viernes</dt>
-                        <dd>09:00 a 18:00</dd>
-
-                        <dt>Sábados</dt>
-                        <dd>10:00 a 16:00</dd>
-
-                        <dt>Domingos</dt>
-                        <dd>Cerrado</dd>
-                    </dl>
-
-                    <h3>Pasos para coordinar una visita guiada</h3>
-                    <!-- lista ordenada -->
-                    <ol>
-                        <li>Revisá nuestros horarios de atención.</li>
-                        <li>Comunicate por teléfono o correo electrónico.</li>
-                        <li>Acercate a nuestra oficina en Avenida central 186.</li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="mt-4">
-                <h3>Redes sociales</h3>
-                <p>
-                    Seguinos en nuestra
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                        red social
-                    </a>
-                    para conocer las novedades de Doofania.
-                </p>
-
-                <!-- componente alert de bootstrap para destacar el mensaje -->
-                <div class="alert alert-light mt-3" role="alert">
-                    <em>Estamos para ayudarte a descubrir todo lo que Doofania tiene para ofrecer.</em><br>
-                    <strong>¡Te esperamos en Doofania!</strong>
-                    Acercate a nuestra oficina para recibir información y recomendaciones
-                    para disfrutar de tu visita.
-                </div>
-            </div>
-        </section>
+    <!-- Información de los lugares de Doofania -->
+    <main>
+      <!-- Introducción turística de la ciudad -->
+      <div>
+         <p>Doofania es una ciudad que se sostiene sobre una cámara de aire (es decir, una ciudad flotante). Eso no significa que no tenga mucho para ofrecer tanto a sus ciudadanos como a los turistas que están de paso.</p>
+         <p>Por eso, la ciudad invita a turistas de distintas ciudades e incluso países, por decisión del alcalde, a visitar sus tres mayores orgullos y disfrutar de los diversos eventos que se celebran a lo largo del año.</p>
+       </div> 
+       <!-- Ballonys Park y su feria anual de quesos -->
+       <section class="globito">
+         <h2>Ballonys Park</h2>
+         <p>El parque central de la ciudad, ubicado en la zona recreativa cerca de la entrada de Doofania.</p>
+         <p>Inicialmente, se presentó como un sitio de conmemoración del mejor amigo del alcalde, Globito.
+            Sin embargo, los ciudadanos decidieron organizar diversos eventos y actividades en todo el parque.</p>
+         <div class="card card-row">
+           <div class="card-body">
+             <h4 class="card-title">La feria de quesos</h4>
+             <p class="card-text">El evento anual más esperado por los ciudadanos y apreciado por el alcalde es la feria de quesos.</p>
+             <p class="card-text">La próxima feria de quesos será el día <time datetime="2026-10-06">6 de octubre de 2026</time>.</p>
+           </div>
+           <img src="multimedia/imagenes/ballonys_park_eventday.jpg" alt="Imagen del parque" height="200" loading="lazy">
+         </div>
+       </section>
+       <!-- Museo-inador: colección, visitas y horarios -->
+       <section class="inadores">
+        <h2>¡El Museo-inador!</h2>
+        <p>Tras varios intentos de dominar el área limítrofe, el propio Doofenshmirtz pensó qué uso podría darles a los inadores fallidos. Por eso, reunió los pocos aparatos y proyectos antiguos que conservaba para reconstruirlos y exponerlos con fines científicos.</p>
+        <p>El museo está cerca del centro de la ciudad, al norte del edificio de M.A., en el área académica.</p>
+     <div class="museo-inador">
+          <div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Información sobre horarios y visitas</h4>
+    <p class="card-subtitle fg-3">Se recomienda la visita a estudiantes y científicos, ya que a veces el propio Doofenshmirtz ofrece visitas guiadas y explica cada uno de sus inadores, desde su creación hasta su destrucción.</p>
+    <p class="card-text">El museo está abierto al público de lunes a viernes, de <time datetime="13:00">13:00</time> a <time datetime="18:00">18:00</time>, excepto los días feriados.
+        La próxima visita de Doofenshmirtz será el <time datetime="2026-10-18">18 de octubre de 2026</time>.</p>
+    <a href="https://phineasyferb.fandom.com/es/wiki/Los_Inventos_de_Doofenshmirtz">Inadores en exposición</a>
+</div>
+</div>
+<img src="multimedia/imagenes/museo.png" alt="Imagen del museo en un día concurrido" height="400" loading="lazy">
+</div>
+       </section>
+       <!-- Casa del mal, centro de la ciudad y sede de eventos -->
+       <section class="seccion-imagen-texto imagen-derecha">
+        <div class="contenido">
+            <h2>La casa del mal</h2>
+          <p>Fue el primer edificio que Doofenshmirtz decidió construir y, por eso, fue declarado la «Casa Blanca» de la ciudad y su centro.</p>
+          <p>Se recomienda visitar el centro de la ciudad porque, al estar ubicado allí, es más fácil acceder a las distintas zonas.</p>
+          <p>En este lugar solo se celebran eventos privados o públicos si el organizador es el alcalde.</p>
+          <p>Una vez al año, se celebra públicamente en el edificio de M.A., con ingreso limitado, el cumpleaños de la hija del alcalde, el <time datetime="2026-06-15">15 de junio de 2026</time>.</p>
+        </div>
+        <img src="multimedia/imagenes/edificio_De_M.A.png" alt="Edificio de Malvados y Asociados en el centro de la ciudad" height="400" loading="lazy">
+       </section>
+       <!-- Transporte público y recorridos turísticos -->
+       <section class="seccion-imagen-texto imagen-izquierda">
+         <div class="contenido">
+           <h2>Transporte de Doofania</h2>
+         <p>Si bien Doofania es una ciudad relativamente pequeña y muchos dudan de su estabilidad, Doofenshmirtz nunca opinó lo mismo. Para facilitar el desplazamiento de ciudadanos y turistas, abrió su propia línea de colectivos eléctricos largos, que se caracterizan por tener elementos propios de los trenes.</p>
+         <p>Los recorridos turísticos suelen realizarse en uno de estos vehículos por su mayor capacidad de transporte.</p>
+         </div>
+         <img src="multimedia/imagenes/estacion_de_tren_chocho.png" alt="Imagen de la estación de tren de la ciudad" height="400" loading="lazy">
+       </section>
     </main>
-
-    <!-- pie de página -->
-    <footer class="pie-pagina">
-        <div class="pie-pagina-texto">
-            <p>Doofania</p>
-            <p>Doofenshmirtz Malvados y Asociados</p>
-            <a href="https://doofenshmirtzmalvadosyasociados.home.blog/">Doofenshmirtz Malvados y Asociados: más información</a>
-        </div>
-        <div class="pie-pagina-firma">
-            <p>Con la firma del Dr. Doofenshmirtz</p>
-            <img src="multimedia/imagenes/DoofSignature.png" alt="Firma del Dr. Doofenshmirtz">
-        </div>
-        <small>Doofania - Turismo y cultura &copy; 2026</small>
-    </footer>
-
-    <!-- scripts de javascript (bootstrap y el script personalizado de la página) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="javascrip/doofania.js"></script>
-
+<!-- Información institucional, firma del alcalde y copyright -->
+<footer class="pie-pagina">
+    <div class="pie-pagina-texto">
+        <p>Doofania</p>
+        <p>Doofenshmirtz Malvados y Asociados</p>
+        <a href="https://doofenshmirtzmalvadosyasociados.home.blog/">Doofenshmirtz Malvados y Asociados: más información</a>
+    </div>
+    <div class="pie-pagina-firma">
+        <p>Con la firma del Dr. Doofenshmirtz</p>
+        <img src="multimedia/imagenes/DoofSignature.png" alt="Firma del Dr. Doofenshmirtz">
+    </div>
+    <small>Doofania - Turismo y cultura &copy; 2026</small>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="javascrip/doofania.js"></script>
 </body>
 </html>
