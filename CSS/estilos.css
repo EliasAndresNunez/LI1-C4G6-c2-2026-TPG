@@ -261,6 +261,27 @@ section.costumbres_y_datos {
   max-width: 100%;
   height: auto;
 }
+/*card de globito*/
+.globito .card.card-row {
+  flex-direction: row;
+  align-items: stretch;
+  width: calc(100% - 2rem);
+  max-width: none;
+  overflow: hidden;
+}
+
+.globito .card.card-row .card-body {
+  flex: 1 1 52%;
+  min-width: 0;
+  align-self: center;
+}
+
+.globito .card.card-row img {
+  width: auto;
+  max-width:45%;
+  margin: 0;
+  padding: 1rem;
+}
 @media (max-width: 700px) {
   .seccion-imagen-texto,
   .seccion-barrios {
